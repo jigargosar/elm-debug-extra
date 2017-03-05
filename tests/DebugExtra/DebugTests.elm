@@ -1,7 +1,7 @@
-module DebugExtra.Debug exposing (..)
+module DebugExtra.DebugTests exposing (..)
 
+import DebugExtra.Debug exposing (tap)
 import Expect
-import Lib.DebugExtra exposing (tap)
 import Test exposing (Test, describe, test)
 
 

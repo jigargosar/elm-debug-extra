@@ -12,18 +12,22 @@ all =
         ]
 
 
-someValue =
-    "foo"
+nameValue =
+    { first = "Jigar", last = "Gosar" }
 
 
 tapTests =
     describe "tap tests"
         [ test "tap returns same value with identity function"
             (\() ->
-                Expect.equal (tap identity someValue) someValue
+                Expect.equal (tap identity nameValue) nameValue
             )
-        , test "tap returns same value with debug function"
+        , test "tapLog returns same value with identity function"
             (\() ->
-                Expect.equal (tapLog identity "someValue =" someValue) someValue
+                Expect.equal (tapLog identity "name =" nameValue) nameValue
+            )
+        , test "tapLog applies the getter function but returns origal value "
+            (\() ->
+                Expect.equal (tapLog identity "name =" nameValue) nameValue
             )
         ]

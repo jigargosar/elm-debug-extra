@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "common functions for debugging",
+    "summary": "common functions for debug logging",
     "repository": "https://github.com/jigargosar/elm-debug-extra.git",
     "license": "BSD3",
     "source-directories": [

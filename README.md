@@ -9,18 +9,25 @@ functionChain = foo >> bar >> baz
 
 ```
 
-Now lets tapLog the output of bar, without affecting baz.
+Using Core's Debug.log we can log a value with a string msg
 
 ```elm
 import DebugExtra.Debug as Debug
 
-functionChain = foo >> bar >> Debug.tapLog "bar output =" >> baz
+functionChain = foo >> bar >> Debug.log "bar output" >> baz
 
 ```
 
+And using tapLog we can skip providing the msg. 
 
+```elm
+import DebugExtra.Debug as Debug exposing (tapLog)
 
-or better yet, we can directly use Debug.tapLog.
+functionChain = foo >> bar >> tapLog >> baz
+
+```
+
+Debug.tap allows us to modify the value and choose what function to execute.
 
 
 ```elm
@@ -35,6 +42,6 @@ doSomethingWithTheValue val =
 functionChain = foo >> bar >> Debug.tap (doSomethingWithTheValue) >> baz
 
 ```
-Debug.tap allows us to modify the value and choose what function to execute.
+
 
 

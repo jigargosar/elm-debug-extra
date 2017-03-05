@@ -1,4 +1,4 @@
-module DebugExtra.Debug exposing (tap)
+module DebugExtra.Debug exposing (tap, tapLog)
 
 
 tap : (value -> ignore) -> value -> value
@@ -11,4 +11,4 @@ tap tapperFunction value =
 
 
 tapLog =
-    Debug.log >> tap
+    Debug.log "tapped value"

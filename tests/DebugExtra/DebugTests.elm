@@ -14,7 +14,11 @@ all =
 
 tapTests =
     describe "tap tests"
-        [ test "tap returns same value "
+        [ test "tap returns same value with identity function"
+            (\() ->
+                Expect.equal (tap identity "foo") "foo"
+            )
+        , test "tap returns same value with debug function"
             (\() ->
                 Expect.equal (tap identity "foo") "foo"
             )

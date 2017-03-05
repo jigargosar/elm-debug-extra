@@ -18,17 +18,17 @@ functionChain = foo >> bar >> Debug.log "bar output" >> baz
 
 ```
 
-And using tapLog we can skip providing the msg. 
+And using tapLog we can transform the value before logging so only relevant information is logged. 
 
 ```elm
 import DebugExtra.Debug as Debug exposing (tapLog)
 
-functionChain = foo >> bar >> tapLog >> baz
+functionChain = foo >> bar >> tapLog (.counterValue) "counter after bar" >> baz
 
 ```
 
-Debug.tap allows us to modify the value and choose what function to execute.
 
+Debug.tap allows us to modify the value and choose what function to execute.
 
 ```elm
 import DebugExtra.Debug as Debug

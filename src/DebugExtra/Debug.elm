@@ -10,5 +10,5 @@ tap tapperFunction value =
         value
 
 
-tapLog =
-    Debug.log "tapped value"
+tapLog transformerFunction logString value =
+    tap |> Debug.log logString (transformerFunction value)

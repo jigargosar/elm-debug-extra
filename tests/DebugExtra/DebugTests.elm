@@ -7,13 +7,15 @@ import Test exposing (Test, describe, test)
 
 all : Test
 all =
-    describe "parsers suite"
-        [ firstSuite
+    describe "debug extra test suite"
+        [ tapTests
         ]
 
 
-firstSuite =
+tapTests =
     describe "tap tests"
         [ test "tap returns same value "
-            (\() -> Expect.equal (tap identity "foo") "foo")
+            (\() ->
+                Expect.equal (tap identity "foo") "foo"
+            )
         ]

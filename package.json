@@ -1,8 +1,10 @@
 {
   "name": "elm-debug-extra",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "elm-test --watch"
+  },
   "devDependencies": {
     "elm-test": "^0.18.2"
   }

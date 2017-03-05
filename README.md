@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/jigargosar/elm-debug-extra.svg?branch=master)](https://travis-ci.org/jigargosar/elm-debug-extra)
+
+
+
 ## Quickly log a value in function chains
 
 ### Sample code

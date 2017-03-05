@@ -1,9 +1,14 @@
 module DebugExtra.Debug exposing (tap)
 
-tap: (value -> ignore) -> value -> value
-tap fn value =
+
+tap : (value -> ignore) -> value -> value
+tap tapperFunction value =
     let
         _ =
-            fn value
+            tapperFunction value
     in
         value
+
+
+tapLog =
+    Debug.log >> tap

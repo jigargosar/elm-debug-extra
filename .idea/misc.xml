@@ -12,18 +12,6 @@
     <exe-path>$USER_HOME$/n/bin/bower</exe-path>
     <config-path />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="/usr/local/bin" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="IDEA jdk" project-jdk-type="JavaSDK" />
   <component name="masterDetails">
     <states>

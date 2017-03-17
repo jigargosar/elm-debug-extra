@@ -24,10 +24,10 @@ tapTests =
             )
         , test "tapLog returns same value with identity function"
             (\() ->
-                Expect.equal (tapLog "name =" identity nameValue) nameValue
+                Expect.equal (tapLog identity "name =" nameValue) nameValue
             )
         , test "tapLog applies the supplied function but returns origal value "
             (\() ->
-                Expect.equal (tapLog "First Name =" (.first) nameValue) nameValue
+                Expect.equal (tapLog (.first) "First Name =" nameValue) nameValue
             )
         ]
